@@ -1,5 +1,6 @@
 %% Lab 11 pandemic modelling
 % Elizabeth Nemeti, Nov 4 2022
+% Recreation of Model 1 from DOI: 10.1038/s42254-021-00314-5
 
 clc
 close all
