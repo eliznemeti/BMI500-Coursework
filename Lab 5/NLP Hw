@@ -1,0 +1,88 @@
+# LAB/HOMEWORK.
+# BMI 500; WEEK 5: NATURAL LANGUAGE PROCESSING
+# AUTHOR: ABEED SARKER
+# DATE: 09/2022
+
+# SUBMISSION PROTOCOL:
+# Put all your answers in a .py file. Put texts (answers and also system output for each question) in comments along with the code.
+
+# 1.
+# a) Look up the documentation for lists, dictionaries and strings in python. (Nothing to submit for this)
+# b) Are there more sophisticated dictionaries? What is a defaultdict?
+# defaultdict is very similar to dict, it's also a container, the difference lies in that it won't raise a KeyError. This is because it provides a default value for the key that doesn't exist.
+
+# 2. A palindrome is a string that reads the same backwards and forwards.
+# a) Write and run some code that checks if a given string is palindrome and prints the result on the screen. Provide 2 outputs in the homework answer--one for a palindrome and one for a non-palindrome.
+def palindrome_check():
+    your_guess = input(("What word do you want to check? "))
+    if (your_guess == your_guess[::-1]):  # splice with start:end:step where -1 reverses your string
+        print("It is a palindrome")
+    else:
+        print("It's not a palindrome")
+
+palindrome_check()
+# for 'house' Output: It's not a palindrome
+# for 'racecar' Output: It is a palindrome
+
+# 3. Programming with strings: For strings, run the following functions and test their utilities.
+# You can find more information in section 3.2 of the NLTK book: http://www.nltk.org/book_1ed/ch03.html.
+
+s = ' The quick brown fox jumped over the lazy dog '  # input string (s)
+# a) Search for the word 'the' using the following functions
+print(s.find('the'))  # index of first instance of string t inside s (-1 if not found)
+# Output: 33
+print(s.rfind('the'))  # index of last instance of string t inside s (-1 if not found)
+# Output: 33
+
+# b) What is the output for 'dog'? What is the output for 'cat' for the following functions?
+print(s.index('dog')) # like s.find(t) except it raises ValueError if not found
+# Output: 42
+print(s.rindex('dog')) # like s.rfind(t) except it raises ValueError if not found
+# Output: 42
+# print(s.index('cat'))
+# # Output: ValueError: substring not found
+# print(s.rindex('cat'))
+# Output: ValueError: substring not found
+
+# c) Split the string and join it via the marker '$$' (using the $$ as 'glue')
+print(s.split())
+# Output: ['The', 'quick', 'brown', 'fox', 'jumped', 'over', 'the', 'lazy', 'dog']
+print("$$".join(s.split()))
+# Output: The$$quick$$brown$$fox$$jumped$$over$$the$$lazy$$dog
+
+# d) Show the outputs of the following 3 functions.
+print(s.lower())
+# Output: the quick brown fox jumped over the lazy dog
+print(s.upper())
+# Output: THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG
+print(s.title())
+# Output: The Quick Brown Fox Jumped Over The Lazy Dog
+
+# e) What does the strip function do to the string s?
+print(s.strip())
+# Output: The quick brown fox jumped over the lazy dog
+# Function: a copy of s without leading or trailing whitespace
+
+# f) Replace 'jumped' with 'flew'
+# s.replace(t, u) replaces instances of t with u inside s
+print(s.replace('jumped', 'flew'))
+# Output: The quick brown fox flew over the lazy dog
+
+# 4. Generating frequency distributions:
+# a) Preprocess the string s by lowercasing it and tokenizing it using the split() function. Remove extra whitespace using the strip() function.
+preprocessed = s.lower().strip().split()  # strip() not last bc can't use on list after split()
+print(preprocessed)
+
+# b) Run the command provided by nltk for generating frequency distributions (FreqDist()).
+import nltk
+print(nltk.FreqDist(preprocessed).elements) # used .elements as coutner, bc without it, "<FreqDist with 8 samples and 9 outcomes>" is the output
+
+# c) Output the distribution.
+# Output: FreqDist({'the': 2, 'quick': 1, 'brown': 1, 'fox': 1, 'jumped': 1, 'over': 1, 'lazy': 1, 'dog': 1})
+
+# d) How does preprocessing affect the generation of frequency distributions?
+print(nltk.FreqDist(s).elements)
+# Output: FreqDist({' ': 10, 'e': 4, 'o': 4, 'h': 2, 'u': 2, 'r': 2, 'd': 2, 'T': 1, 'q': 1, 'i': 1, ...})
+# Based on comparing the preprocessed and original string "s", we see that in using preprocessing,
+# the output was much more interpretable in distributing frequency by words than letters to lend meaning to the analyis.
+# Also, The and the would count separetely, which is not helpful in an accurate analysis of word frequency.
