@@ -1,0 +1,213 @@
+==========================
+
+Num of true positives = 425
+
+Num of false positives = 2085
+
+Num of false negatives = 1354
+
+Sensitivity/Recall = 0.239
+
+PPV/Specificity = 0.866
+
+==========================
+
+
+Total events in 'id-phi.phrase': 1779
+========================================
+Categories Present:
+Location
+DateYear
+Date
+HCPName
+PTName
+RelativeProxyName
+Phone
+Other
+PTNameInitial
+Age
+========================================
+
+
+
+
+
+
+Examining "Location" category.
+
+
+==========================
+
+Num of true positives = 80
+
+Num of false positives = 2148
+
+Num of false negatives = 287
+
+Sensitivity/Recall = 0.218
+
+PPV/Specificity = 0.862
+
+==========================
+
+
+Examining "DateYear" category.
+
+
+==========================
+
+Num of true positives = 30
+
+Num of false positives = 2150
+
+Num of false negatives = 16
+
+Sensitivity/Recall = 0.652
+
+PPV/Specificity = 0.862
+
+==========================
+
+
+Examining "Date" category.
+
+
+==========================
+
+Num of true positives = 226
+
+Num of false positives = 2118
+
+Num of false negatives = 256
+
+Sensitivity/Recall = 0.469
+
+PPV/Specificity = 0.864
+
+==========================
+
+
+Examining "HCPName" category.
+
+
+==========================
+
+Num of true positives = 21
+
+Num of false positives = 2151
+
+Num of false negatives = 572
+
+Sensitivity/Recall = 0.035
+
+PPV/Specificity = 0.862
+
+==========================
+
+
+Examining "PTName" category.
+
+
+==========================
+
+Num of true positives = 12
+
+Num of false positives = 2152
+
+Num of false negatives = 42
+
+Sensitivity/Recall = 0.222
+
+PPV/Specificity = 0.862
+
+==========================
+
+
+Examining "RelativeProxyName" category.
+
+
+==========================
+
+Num of true positives = 9
+
+Num of false positives = 2155
+
+Num of false negatives = 166
+
+Sensitivity/Recall = 0.051
+
+PPV/Specificity = 0.862
+
+==========================
+
+
+Examining "Phone" category.
+
+
+==========================
+
+Num of true positives = 40
+
+Num of false positives = 2140
+
+Num of false negatives = 13
+
+Sensitivity/Recall = 0.755
+
+PPV/Specificity = 0.863
+
+==========================
+
+
+Examining "Other" category.
+
+
+==========================
+
+Num of true positives = 3
+
+Num of false positives = 2154
+
+Num of false negatives = 0
+
+Sensitivity/Recall = 1.0
+
+PPV/Specificity = 0.862
+
+==========================
+
+
+Examining "PTNameInitial" category.
+
+
+==========================
+
+Num of true positives = 0
+
+Num of false positives = 2155
+
+Num of false negatives = 2
+
+Sensitivity/Recall = 0.0
+
+PPV/Specificity = 0.862
+
+==========================
+
+
+Examining "Age" category.
+
+
+==========================
+
+Num of true positives = 4
+
+Num of false positives = 2155
+
+Num of false negatives = 0
+
+Sensitivity/Recall = 1.0
+
+PPV/Specificity = 0.862
+
+==========================
